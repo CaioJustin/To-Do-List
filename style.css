@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(241, 226, 5);
+
+}
+
+/*Configurando area da lista*/
+.area{
+    border-radius: 5px ;
+    border: 1px solid black;
+    background-color: #f1f8fb;
+    padding: 5px;
+    height: auto;
+}
+
+/*Configurando nome*/
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+#input{
+    border: 1px solid rgb(0, 162, 255);
+    height: 30px;
+    width: 20rem;
+    border-radius: 3px;
+    transition: 0.5s ease-in-out;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#input:hover{transform: scale(1.1);}
+
+#button{
+    height: 40px;
+    width: 6rem;
+    background: rgb(0, 183, 255);
+    color: white;
+    font-size: larger;
+    border: none;
+    padding: 1px;
+    border-radius: 2px;
+    transition:0.5s ease-in-out;
+}
+
+#button:hover{
+    background: rgb(3, 238, 34);
+    transform: scale(1.1);
+}
+
+div p{
+    text-align: center;
+    font-size: larger
+}
+
+
+#tarefas{
+    
+    gap: 5px;
+    padding: 5px;
+       height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.checkmark{   
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    display: inline-block;
+  
+}
+
+.container input {
+    opacity: 0;
+    cursor: pointer;
+    all: unset;
+
+}
+
+.container input:checked + .checkmark{
+    background: rgb(0, 225, 255);
+    height: 20px;
+    transition:  0.5 ease-in-out;
+}
+
+
+
+li  {
+    display: flex;
+    gap: 5px;
+    height: 30px;
+    padding: 5px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+      background-color: #ffffff;
+}
+
+li button{
+    background: rgb(0, 204, 255);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: larger;
+    padding: 5px;
+    transition: 0.4s ease-in-out;
+}
+
+li button:hover{
+    background: red; 
+}
+
+
+li p{
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
