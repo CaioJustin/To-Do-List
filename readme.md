@@ -4,6 +4,6 @@
 
 ## Funcionalidade
 
-**Criar Tarefas**  e possivel criar tarefas dinamicamente
-**Persistencia de dados** As tarefas são salvas no LocalStorage
-**Carregamento Automatica**  As tarefas continuam mesmo apos a pagina ser atualizadas
+- **Criar Tarefas**  e possivel criar tarefas dinamicamente
+- **Persistencia de dados** As tarefas são salvas no LocalStorage
+- **Carregamento Automatica**  As tarefas continuam mesmo apos a pagina ser atualizadas
