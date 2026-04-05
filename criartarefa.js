@@ -23,6 +23,7 @@ export function criartarefa() {
 
     let botao = document.createElement('button')
     botao.innerText = "Remover";
+    botao.classList.add('btn')
 
     let n = input.value
     let tasks = []
@@ -79,6 +80,7 @@ export function display(){
 
             let botao = document.createElement('button')
             botao.innerText = "Remover";
+            botao.classList.add('btn')
 
             label.append(inpu, span)
             li.append(label, p, botao)
@@ -86,12 +88,52 @@ export function display(){
         })
 
            
-            qtdtask.innerText=`Você tem ${tasks.length} tarefas para completa`
+         
     }else{
-            
-            qtdtask.innerText="Nenhuam tarefas Adicionada"
     }
 
 
 console.log(tasks)
+}
+
+
+export function qtdTarefa(){
+        let taskSalvas = localStorage.getItem('tarefa')
+        let tasks = taskSalvas ? JSON.parse(taskSalvas) :[]
+
+       if(tasks.length > 0) {
+        qtdtask.innerText=`Você tem ${tasks.length} tarefas para completa`
+    }else{
+            
+            qtdtask.innerText="Nenhuam tarefas Adicionada"
+    }
+}
+
+
+export function Btndelete(){
+
+   let btn = document.querySelectorAll('.btn')
+    
+    let taskSalvas=localStorage.getItem('tarefa')
+    let task = taskSalvas? JSON.parse(taskSalvas) :[]
+    
+   btn.forEach((B)=>{
+    B.addEventListener("click",(ev)=>{
+        let botaoClikado = ev.currentTarget;
+        let outside =botaoClikado.parentNode
+        let texto =outside.querySelector('p')
+        
+        console.log(texto.innerText)
+
+        outside.remove()
+      task=  task.filter((item)=>item.NameTask !=texto.innerText)
+
+        localStorage.setItem('tarefa',JSON.stringify(task))
+        
+
+    })
+   })
+
+
+
 }
